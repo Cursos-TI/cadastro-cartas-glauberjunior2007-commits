@@ -8,6 +8,7 @@ int main()
   char estado, estado2;
   char codigo[5], codigo2[5];
   char nome[50], nome2[50];
+  float densidade1, densidade2, percapita1, percapita2;
 
   printf("\n-----JOGADOR 1-----\n");
 
@@ -51,21 +52,41 @@ int main()
   printf("digite o pib da sua cidade: ");
   scanf("%f", &pib2);
 
+  percapita2 = pib2 / populacao2;
+  printf("O pib per capita da sua cidade é: %f\n", percapita2);
+  
+  densidade2 = populacao2 / area2;
+  printf("A densidade populacional da sua ciddade é: %.2f\n", densidade2);
+
+  
+
   printf("\nCARTA 1: \n");
-  printf("\nEstado: %c", estado);
   printf("\nCódigo: %s", codigo);
+  printf("\nEstado: %c", estado);
   printf("\nNome Da Cidade: %s", nome);
   printf("\nPopulação: %d", populacao);
-  printf("\nÁrea: %.2f", area);
-  printf("\nPIB: %.2f\n", pib);
+  printf("\nÁrea: %f", area);
+  printf("\nPIB: %.2f", pib);
+
+  densidade1 = (float) populacao / area;
+  printf("A densidade populacional da sua ciddade é: %.2f\n", densidade1);
+
+  percapita1 = (float) pib / populacao;
+  printf("O pib per capita da sua cidade é: %.2f\n", percapita1);
 
   printf("\n CARTA 2: \n");
   printf("\nEstado: %c", estado2);
   printf("\nCódigo: %s", codigo2);
   printf("\nNome Da Cidade: %s", nome2);
   printf("\nPopulação: %d", populacao2);
-  printf("\nÁrea: %.2f", area2);
-  printf("\nPIB: %.2f", pib2);
+  printf("\nÁrea: %f", area2);
+  printf("\nPIB: %.2f""\n", pib2);
+
+  percapita2 = (float) pib2 / populacao2;
+  printf("O pib per capita da sua cidade é: %.2f\n", percapita2);
+  
+  densidade2 = (float) populacao2 / area2;
+  printf("A densidade populacional da sua ciddade é: %.2f\n", densidade2);
 
   return 0;
 }
